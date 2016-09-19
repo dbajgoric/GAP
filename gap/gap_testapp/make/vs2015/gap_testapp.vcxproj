@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2C2A69E4-65BF-4FB1-BF44-ED5F7E281CD4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gap_testapp</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\</OutDir>
+    <IntDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\intermediates\</IntDir>
+    <IncludePath>..\..\..\gap_util\;..\..\..\gap_transform\;..\..\..\..\ext-lib\armadillo\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\</OutDir>
+    <IntDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\intermediates\</IntDir>
+    <IncludePath>..\..\..\gap_util\;..\..\..\gap_transform\;..\..\..\..\ext-lib\armadillo\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;blasd.lib;lapackd.lib;libf2cd.lib;gap_util.lib;gap_transform.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_util\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_transform\lib\win$(PlatformArchitecture)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)..\..\..\scripts\unzip_script.bat ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\*.zip ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\</Command>
+      <Message>Unzips the lapack static libs</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;blas.lib;lapack.lib;libf2c.lib;gap_util.lib;gap_transform.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_util\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_transform\lib\win$(PlatformArchitecture)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)..\..\..\scripts\unzip_script.bat ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\*.zip ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\</Command>
+      <Message>Unzips the lapack static libs</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\gap_testapp\dependence_analyser_test.h" />
+    <ClInclude Include="..\..\gap_testapp\diophantine_test.h" />
+    <ClInclude Include="..\..\gap_testapp\fourier_elimination_test.h" />
+    <ClInclude Include="..\..\gap_testapp\matrix_test.h" />
+    <ClInclude Include="..\..\gap_testapp\rational_number_test.h" />
+    <ClInclude Include="..\..\gap_testapp\row_col_vector_test.h" />
+    <ClInclude Include="..\..\gap_testapp\test_utils.h" />
+    <ClInclude Include="..\..\gap_testapp\unimodular_transform_test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\gap_testapp\dependence_analyser_test.cpp" />
+    <ClCompile Include="..\..\gap_testapp\diophantine_test.cpp" />
+    <ClCompile Include="..\..\gap_testapp\fourier_elimination_test.cpp" />
+    <ClCompile Include="..\..\gap_testapp\main.cpp" />
+    <ClCompile Include="..\..\gap_testapp\matrix_test.cpp" />
+    <ClCompile Include="..\..\gap_testapp\rational_number_test.cpp" />
+    <ClCompile Include="..\..\gap_testapp\row_col_vector_test.cpp" />
+    <ClCompile Include="..\..\gap_testapp\unimodular_transform_test.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

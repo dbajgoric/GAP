@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gap_util", "..\..\..\gap_util\make\vs2015\gap_util.vcxproj", "{420486FA-568E-470B-86A2-83B69C06D111}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gap_testapp", "..\..\..\gap_testapp\make\vs2015\gap_testapp.vcxproj", "{2C2A69E4-65BF-4FB1-BF44-ED5F7E281CD4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0B542BA-722A-46EA-9C3B-AE6AA104826A} = {E0B542BA-722A-46EA-9C3B-AE6AA104826A}
+		{420486FA-568E-470B-86A2-83B69C06D111} = {420486FA-568E-470B-86A2-83B69C06D111}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gap_transform", "..\..\..\gap_transform\make\vs2015\gap_transform.vcxproj", "{E0B542BA-722A-46EA-9C3B-AE6AA104826A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gap_frontend", "gap_frontend.vcxproj", "{3061631D-F1EA-4FB5-B33A-4A8CBE145527}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0B542BA-722A-46EA-9C3B-AE6AA104826A} = {E0B542BA-722A-46EA-9C3B-AE6AA104826A}
+		{420486FA-568E-470B-86A2-83B69C06D111} = {420486FA-568E-470B-86A2-83B69C06D111}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|32 = Debug|32
+		Release|32 = Release|32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{420486FA-568E-470B-86A2-83B69C06D111}.Debug|32.ActiveCfg = Debug|Win32
+		{420486FA-568E-470B-86A2-83B69C06D111}.Debug|32.Build.0 = Debug|Win32
+		{420486FA-568E-470B-86A2-83B69C06D111}.Release|32.ActiveCfg = Release|Win32
+		{420486FA-568E-470B-86A2-83B69C06D111}.Release|32.Build.0 = Release|Win32
+		{2C2A69E4-65BF-4FB1-BF44-ED5F7E281CD4}.Debug|32.ActiveCfg = Debug|Win32
+		{2C2A69E4-65BF-4FB1-BF44-ED5F7E281CD4}.Debug|32.Build.0 = Debug|Win32
+		{2C2A69E4-65BF-4FB1-BF44-ED5F7E281CD4}.Release|32.ActiveCfg = Release|Win32
+		{2C2A69E4-65BF-4FB1-BF44-ED5F7E281CD4}.Release|32.Build.0 = Release|Win32
+		{E0B542BA-722A-46EA-9C3B-AE6AA104826A}.Debug|32.ActiveCfg = Debug|Win32
+		{E0B542BA-722A-46EA-9C3B-AE6AA104826A}.Debug|32.Build.0 = Debug|Win32
+		{E0B542BA-722A-46EA-9C3B-AE6AA104826A}.Release|32.ActiveCfg = Release|Win32
+		{E0B542BA-722A-46EA-9C3B-AE6AA104826A}.Release|32.Build.0 = Release|Win32
+		{3061631D-F1EA-4FB5-B33A-4A8CBE145527}.Debug|32.ActiveCfg = Debug|Win32
+		{3061631D-F1EA-4FB5-B33A-4A8CBE145527}.Debug|32.Build.0 = Debug|Win32
+		{3061631D-F1EA-4FB5-B33A-4A8CBE145527}.Release|32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

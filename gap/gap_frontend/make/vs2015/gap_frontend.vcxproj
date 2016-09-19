@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\gap_frontend\array_subscript.h" />
+    <ClInclude Include="..\..\gap_frontend\array_subscript_serializer.h" />
+    <ClInclude Include="..\..\gap_frontend\assign_stmt.h" />
+    <ClInclude Include="..\..\gap_frontend\code_generator.h" />
+    <ClInclude Include="..\..\gap_frontend\file_path_helpers.h" />
+    <ClInclude Include="..\..\gap_frontend\invocation_stmts_gen.h" />
+    <ClInclude Include="..\..\gap_frontend\kernel_def_gen.h" />
+    <ClInclude Include="..\..\gap_frontend\compilation_driver.h" />
+    <ClInclude Include="..\..\gap_frontend\dep_mdl_assign_stmt.h" />
+    <ClInclude Include="..\..\gap_frontend\ast_helpers.h" />
+    <ClInclude Include="..\..\gap_frontend\clang_allocator.h" />
+    <ClInclude Include="..\..\gap_frontend\dependence_mdl.h" />
+    <ClInclude Include="..\..\gap_frontend\fake_stmt_mngr.h" />
+    <ClInclude Include="..\..\gap_frontend\for_loop_header.h" />
+    <ClInclude Include="..\..\gap_frontend\identifier.h" />
+    <ClInclude Include="..\..\gap_frontend\linear_expr.h" />
+    <ClInclude Include="..\..\gap_frontend\linear_expr_serializer.h" />
+    <ClInclude Include="..\..\gap_frontend\nest_analysis_driver.h" />
+    <ClInclude Include="..\..\gap_frontend\nest_rewriter.h" />
+    <ClInclude Include="..\..\gap_frontend\nest_transformer.h" />
+    <ClInclude Include="..\..\gap_frontend\mat_vec_pair.h" />
+    <ClInclude Include="..\..\gap_frontend\nest_info_collector.h" />
+    <ClInclude Include="..\..\gap_frontend\perfect_loop_nest.h" />
+    <ClInclude Include="..\..\gap_frontend\symbol_table.h" />
+    <ClInclude Include="..\..\gap_frontend\sym_tbl_builder.h" />
+    <ClInclude Include="..\..\gap_frontend\sym_tbl_tree.h" />
+    <ClInclude Include="..\..\gap_frontend\sym_tbl_tree_node.h" />
+    <ClInclude Include="..\..\gap_frontend\transformation.h" />
+    <ClInclude Include="..\..\gap_frontend\tree_node_dumper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\gap_frontend\array_decl_info.h" />
+    <ClCompile Include="..\..\gap_frontend\array_subscript.cpp" />
+    <ClCompile Include="..\..\gap_frontend\array_subscript_serializer.cpp" />
+    <ClCompile Include="..\..\gap_frontend\assign_stmt.cpp" />
+    <ClCompile Include="..\..\gap_frontend\code_generator.cpp" />
+    <ClCompile Include="..\..\gap_frontend\file_path_helpers.cpp" />
+    <ClCompile Include="..\..\gap_frontend\invocation_stmts_gen.cpp" />
+    <ClCompile Include="..\..\gap_frontend\kernel_def_gen.cpp" />
+    <ClCompile Include="..\..\gap_frontend\compilation_driver.cpp" />
+    <ClCompile Include="..\..\gap_frontend\dependence_mdl.cpp" />
+    <ClCompile Include="..\..\gap_frontend\dep_mdl_assign_stmt.cpp" />
+    <ClCompile Include="..\..\gap_frontend\ast_helpers.cpp" />
+    <ClCompile Include="..\..\gap_frontend\fake_stmt_mngr.cpp" />
+    <ClCompile Include="..\..\gap_frontend\for_loop_header.cpp" />
+    <ClCompile Include="..\..\gap_frontend\identifier.cpp" />
+    <ClCompile Include="..\..\gap_frontend\linear_expr.cpp" />
+    <ClCompile Include="..\..\gap_frontend\linear_expr_serializer.cpp" />
+    <ClCompile Include="..\..\gap_frontend\nest_analysis_driver.cpp" />
+    <ClCompile Include="..\..\gap_frontend\nest_rewriter.cpp" />
+    <ClCompile Include="..\..\gap_frontend\nest_transformer.cpp" />
+    <ClCompile Include="..\..\gap_frontend\main.cpp" />
+    <ClCompile Include="..\..\gap_frontend\nest_info_collector.cpp" />
+    <ClCompile Include="..\..\gap_frontend\perfect_loop_nest.cpp" />
+    <ClCompile Include="..\..\gap_frontend\symbol_table.cpp" />
+    <ClCompile Include="..\..\gap_frontend\sym_tbl_builder.cpp" />
+    <ClCompile Include="..\..\gap_frontend\sym_tbl_tree.cpp" />
+    <ClCompile Include="..\..\gap_frontend\sym_tbl_tree_node.cpp" />
+    <ClCompile Include="..\..\gap_frontend\tree_node_dumper.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3061631D-F1EA-4FB5-B33A-4A8CBE145527}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gap_frontend</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\</OutDir>
+    <IntDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\intermediates\</IntDir>
+    <IncludePath>..\..\..\gap_transform\;..\..\..\..\ext-lib\llvm\;..\..\..\gap_util\;..\..\..\..\ext-lib\armadillo\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\</OutDir>
+    <IntDir>..\..\lib\win$(PlatformArchitecture)\$(Configuration)\intermediates\</IntDir>
+    <IncludePath>..\..\..\gap_transform\;..\..\..\..\ext-lib\llvm\;..\..\..\gap_util\;..\..\..\..\ext-lib\armadillo\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;blasd.lib;lapackd.lib;libf2cd.lib;gap_util.lib;gap_transform.lib;LLVMCore.lib;LLVMMC.lib;LLVMMCParser.lib;LLVMOption.lib;LLVMSupport.lib;clangBasic.lib;clangDriver.lib;clangFrontend.lib;LLVMProfileData.lib;clangParse.lib;clangSerialization.lib;LLVMBitReader.lib;clangSema.lib;clangEdit.lib;clangAnalysis.lib;clangAST.lib;clangRewrite.lib;clangLex.lib;clangTooling.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\ext-lib\llvm\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_util\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_transform\lib\win$(PlatformArchitecture)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)..\..\..\scripts\unzip_script.bat ..\..\..\..\ext-lib\llvm\lib\win$(PlatformArchitecture)\$(Configuration)\*.zip ..\..\..\..\ext-lib\llvm\lib\win$(PlatformArchitecture)\$(Configuration)\ &amp;&amp; call $(ProjectDir)..\..\..\scripts\unzip_script.bat ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\*.zip ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\</Command>
+      <Message>Unzips the llvm and lapack static libs</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;blas.lib;lapack.lib;libf2c.lib;gap_util.lib;gap_transform.lib;LLVMCore.lib;LLVMMC.lib;LLVMMCParser.lib;LLVMOption.lib;LLVMSupport.lib;clangBasic.lib;clangDriver.lib;clangFrontend.lib;LLVMProfileData.lib;clangParse.lib;clangSerialization.lib;LLVMBitReader.lib;clangSema.lib;clangEdit.lib;clangAnalysis.lib;clangAST.lib;clangRewrite.lib;clangLex.lib;clangTooling.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\ext-lib\llvm\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_util\lib\win$(PlatformArchitecture)\$(Configuration)\;..\..\..\gap_transform\lib\win$(PlatformArchitecture)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>call $(ProjectDir)..\..\..\scripts\unzip_script.bat ..\..\..\..\ext-lib\llvm\lib\win$(PlatformArchitecture)\$(Configuration)\*.zip ..\..\..\..\ext-lib\llvm\lib\win$(PlatformArchitecture)\$(Configuration)\ &amp;&amp; call $(ProjectDir)..\..\..\scripts\unzip_script.bat ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\*.zip ..\..\..\..\ext-lib\lapack\lib\win$(PlatformArchitecture)\$(Configuration)\</Command>
+      <Message>Unzips the llvm and lapack static libs</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
